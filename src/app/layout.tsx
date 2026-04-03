@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  // metadataBase: new URL("https://vaishnotemple.in"),
+  metadataBase: new URL("https://vaishnotemple.in"),
   title: {
     default: "Vaishno Temple Kirti Nagar — Corian & Wooden Mandir Shop in Delhi",
     template: "%s | Vaishno Temple",
