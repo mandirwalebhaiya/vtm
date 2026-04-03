@@ -1,0 +1,8 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#b8905f"/>
+  <rect x="50" y="40" width="200" height="220" fill="#8b6f47" stroke="#5d4a35" stroke-width="2" rx="4"/>
+  <polygon points="150,20 130,50 170,50" fill="#6d5a45" stroke="#4d3a25" stroke-width="1"/>
+  <circle cx="150" cy="150" r="30" fill="#d4a76a" opacity="0.3"/>
+  <text x="150" y="160" font-size="35" text-anchor="middle" fill="#d4a76a">ॐ</text>
+  <text x="150" y="270" font-size="12" text-anchor="middle" fill="#f0e8d8">Wooden Mandir</text>
+</svg>

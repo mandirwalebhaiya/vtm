@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display:    'Cormorant Garamond', serif;
+  --font-body:       'Jost', sans-serif;
+  --font-devanagari: 'Tiro Devanagari Hindi', serif;
+
+  --saffron:    #f97d08;
+  --saffron-dk: #e06200;
+  --saffron-lt: #fff3e0;
+  --cream:      #fdfaf5;
+  --gold:       #c9920a;
+  --text-dark:  #1a0e00;
+  --text-mid:   #4a3520;
+  --text-light: #8a7060;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #ffffff;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Utility classes ──────────────────────────── */
+.font-display    { font-family: var(--font-display); }
+.font-devanagari { font-family: var(--font-devanagari); }
+
+/* Decorative divider */
+.divider-om::before {
+  content: "🕉";
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--saffron);
+  margin-bottom: 0.5rem;
+}
+
+/* Animated underline for links */
+.animated-underline {
+  position: relative;
+}
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--saffron);
+  transition: width 0.3s ease;
+}
+.animated-underline:hover::after { width: 100%; }
+
+/* Mandala ring decoration */
+.mandala-ring {
+  border: 1px solid rgba(249, 125, 8, 0.2);
+  border-radius: 50%;
+}
+
+/* Section fade-up animation with stagger */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+@layer components {
+  .section-padding {
+    @apply px-5 sm:px-8 md:px-12 lg:px-20 xl:px-28;
+  }
+  .container-site {
+    @apply max-w-7xl mx-auto;
+  }
+  .heading-display {
+    @apply font-display text-[var(--text-dark)] leading-tight tracking-tight;
+  }
+  .text-saffron { color: var(--saffron); }
+  .bg-saffron   { background-color: var(--saffron); }
+}

@@ -1,0 +1,9 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#f5f5f5"/>
+  <rect x="50" y="40" width="200" height="220" fill="#ffffff" stroke="#ddd" stroke-width="2" rx="8"/>
+  <path d="M 75 40 Q 150 10 225 40" fill="none" stroke="#ddd" stroke-width="1"/>
+  <rect x="80" y="80" width="140" height="140" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <circle cx="150" cy="150" r="35" fill="#f97d08" opacity="0.1"/>
+  <text x="150" y="160" font-size="35" text-anchor="middle" fill="#f97d08">ॐ</text>
+  <text x="150" y="260" font-size="12" text-anchor="middle" fill="#666">Corian Mandir</text>
+</svg>
