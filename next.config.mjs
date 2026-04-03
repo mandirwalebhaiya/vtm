@@ -4,7 +4,6 @@ const nextConfig = {
         remotePatterns: [],
     },
     reactStrictMode: true,
-    swcMinify: true,
     staticPageGenerationTimeout: 120,
     poweredByHeader: false,
 };

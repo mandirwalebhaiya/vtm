@@ -146,9 +146,9 @@ export default function Footer() {
         <div className="section-padding container-site py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-body text-white/30">
           <p>© {new Date().getFullYear()} Vaishno Temple. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/privacy-policy" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
-            <Link href="/terms"          className="hover:text-white/60 transition-colors">Terms of Use</Link>
-            <Link href="/sitemap.xml"    className="hover:text-white/60 transition-colors">Sitemap</Link>
+            <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
+            <Link href="/products" className="hover:text-white/60 transition-colors">Products</Link>
+            <Link href="/gallery" className="hover:text-white/60 transition-colors">Gallery</Link>
           </div>
           <p className="font-devanagari text-white/20">🕉 हर हर महादेव 🕉</p>
         </div>
