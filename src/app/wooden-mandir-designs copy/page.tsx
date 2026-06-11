@@ -7,7 +7,7 @@ import { getWhatsAppLink } from "@/lib/whatsapp";
 const BASE_URL =
   "https://corian-mandir-kirti-nagar.vaishnotemple.in";
 
-export default function CorianMandirDesignsPage() {
+export default function WoodenMandirDesignsPage() {
   const [images, setImages] = useState<any[]>([]);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -41,7 +41,7 @@ export default function CorianMandirDesignsPage() {
     const url = img.source_url?.toLowerCase() || "";
     const alt = img.alt_text?.toLowerCase() || "";
 
-    return url.includes("corian") || alt.includes("corian");
+    return url.includes("wooden") || alt.includes("wooden");
   });
 
   
@@ -142,7 +142,7 @@ export default function CorianMandirDesignsPage() {
 //   return res.json();
 // }
 
-// export default async function CorianMandirDesignsPage() {
+// export default async function Gallery2Page() {
 //   const images = await getImages();
 
 //   return (
