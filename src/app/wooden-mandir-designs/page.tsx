@@ -37,7 +37,7 @@ export default function WoodenMandirDesignsPage() {
   }, []);
 
    // 🔥 👉 ADD FILTER HERE (THIS IS THE ANSWER)
-  const corianImages = images.filter((img: any) => {
+  const woodenImages = images.filter((img: any) => {
     const url = img.source_url?.toLowerCase() || "";
     const alt = img.alt_text?.toLowerCase() || "";
 
@@ -46,12 +46,11 @@ export default function WoodenMandirDesignsPage() {
 
   
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">Mandir Gallery</h1>
-
+    <div className="pt-24 p-6">
+    
       {/* GRID */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-        {corianImages.map((img: any,index) => (
+        {woodenImages.map((img: any,index) => (
           <div
             key={img.id}
             className="relative group cursor-pointer"

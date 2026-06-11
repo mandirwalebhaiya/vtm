@@ -37,18 +37,27 @@ export default function CorianMandirDesignsPage() {
   }, []);
 
    // 🔥 👉 ADD FILTER HERE (THIS IS THE ANSWER)
-  const corianImages = images.filter((img: any) => {
-    const url = img.source_url?.toLowerCase() || "";
-    const alt = img.alt_text?.toLowerCase() || "";
+  // const corianImages = images.filter((img: any) => {
+  //   const url = img.source_url?.toLowerCase() || "";
+  //   const alt = img.alt_text?.toLowerCase() || "";
 
-    return url.includes("corian") || alt.includes("corian");
-  });
+  //   return url.includes("corian") || alt.includes("corian");
+  // });
+  const corianImages = images.filter((img: any) => {
+  const url = img.source_url?.toLowerCase() || "";
+  const alt = img.alt_text?.toLowerCase() || "";
+
+  return (
+    (url.includes("corian") || alt.includes("corian")) &&
+    !url.includes("wooden") &&
+    !alt.includes("wooden")
+  );
+});
 
   
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">Mandir Gallery</h1>
-
+    <div className="pt-24 p-6">
+     
       {/* GRID */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {corianImages.map((img: any,index) => (
