@@ -4,9 +4,8 @@ import Button from "@/components/ui/Button";
 const PRODUCT_LINKS = [
   { label: "Corian Mandirs",    href: "/products/corian" },
   { label: "Wooden Mandirs",    href: "/products/wooden" },
-  { label: "Marble Mandirs",    href: "/products/marble" },
-  { label: "Custom Designs",    href: "/products/custom" },
-  { label: "Office Mandirs",    href: "/products/office" },
+  { label: "Latest Corian Mandir Designs",    href: "/corian-mandir-designs" },
+{ label: "Modern Wooden Mandir Designs",    href: "/wooden-mandir-designs" },
 ];
 
 const COMPANY_LINKS = [

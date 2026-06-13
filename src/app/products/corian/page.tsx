@@ -61,7 +61,7 @@ export default function CorianPage() {
       </section>
 
       {/* Products grid */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="section-padding container-site">
           <SectionHeading
             eyebrow={`${products.length} Designs Available`}

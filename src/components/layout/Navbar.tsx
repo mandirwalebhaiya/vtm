@@ -6,8 +6,9 @@ import Button from "@/components/ui/Button";
 
 const NAV_LINKS = [
   { label: "Home",       href: "/" },
+  { label: "Corian-Mandirs",    href: "/corian-mandir-designs" },
+  { label: "Wooden-Mandirs",    href: "/wooden-mandir-designs" },
   { label: "Products",   href: "/products" },
-  { label: "Gallery",    href: "/gallery" },
   { label: "About Us",   href: "/about" },
   { label: "Contact",    href: "/contact" },
 ];

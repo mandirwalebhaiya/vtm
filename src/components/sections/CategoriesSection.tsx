@@ -13,7 +13,7 @@ export default function CategoriesSection() {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {Object.entries(CATEGORIES_META).slice(0, 2).map(([key, cat]) => (
+          {Object.entries(CATEGORIES_META).slice(0, 4).map(([key, cat]) => (
             <Card
               key={key}
               title={cat.title}

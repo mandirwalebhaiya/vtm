@@ -13,37 +13,15 @@ export default function ProductCard({ product, showBadge = true }: ProductCardPr
       href={`/products/${product.category}/${product.id}`}
       className="group relative bg-white border border-stone-100 rounded-sm overflow-hidden hover:border-[#f97d08]/30 hover:shadow-[0_12px_48px_rgba(249,125,8,0.10)] transition-all duration-500 flex flex-col"
     >
-      {/* Visual top */}
-      <div className="relative h-52 bg-gradient-to-br from-[#fff8f0] to-[#fdfaf5] flex items-center justify-center overflow-hidden">
-        {/* Rings */}
-        <div className="absolute w-36 h-36 border border-[#f97d08]/15 rounded-full group-hover:border-[#f97d08]/30 transition-colors duration-500" />
-        <div className="absolute w-24 h-24 border border-[#f97d08]/20 rounded-full" />
-        
-        {/* Image with fallback to emoji */}
-        <div className="relative w-full h-full flex items-center justify-center z-10">
-          <Image
-            src={product.image}
-            alt={product.imageAlt}
-            width={200}
-            height={200}
-            className="object-contain w-auto h-auto max-w-[150px] max-h-[150px] group-hover:scale-110 transition-transform duration-500"
-            priority={false}
-          />
-        </div>
-        
-        {/* Hover overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#f97d08]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        {/* Badges */}
-        {showBadge && product.badge && (
-          <span className="absolute top-3 right-3 bg-[#f97d08] text-white text-[10px] font-body font-medium px-2.5 py-1 rounded-full tracking-wider uppercase">
-            {product.badge}
-          </span>
-        )}
-        {product.popular && !product.badge && (
-          <span className="absolute top-3 left-3 bg-[#1a0e00]/80 text-white text-[10px] font-body px-2.5 py-1 rounded-full tracking-wider uppercase">
-            Popular
-          </span>
-        )}
+      {/* Visual top - Image only */}
+      <div className="relative h-64 flex items-center justify-center overflow-hidden bg-white">
+        <Image
+          src={product.image}
+          alt={product.imageAlt}
+          fill
+          className="object-contain group-hover:scale-110 transition-transform duration-500"
+          priority={false}
+        />
       </div>
 
       {/* Content */}
