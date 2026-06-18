@@ -11,6 +11,20 @@ export const metadata: Metadata = {
   },
   description:
     "Vaishno Temple crafts premium Corian and wooden Pooja Mandirs for homes and offices across India. Custom designs, divine craftsmanship, pan-India delivery.",
+
+    
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico" }, // fallback for old browsers
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+ 
+  manifest: "/site.webmanifest",
   keywords: [
     "corian mandir",
     "wooden mandir",
@@ -34,7 +48,7 @@ export const metadata: Metadata = {
       "Premium handcrafted Corian and wooden Pooja Mandirs. Custom designs for every home. Pan-India delivery.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Vaishno Temple — Premium Mandirs",
@@ -46,7 +60,7 @@ export const metadata: Metadata = {
     title: "Vaishno Temple — Handcrafted Corian & Wooden Mandirs",
     description:
       "Premium handcrafted Corian and wooden Pooja Mandirs. Custom designs for every home.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
