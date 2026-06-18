@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 const CATEGORY_FILTERS = [
   { key: "all",    label: "All Products" },
   { key: "corian", label: "Corian" },
-  { key: "wooden", label: "Wooden" },
-  { key: "marble", label: "Marble" },
+  { key: "wooden", label: "Wooden" }, 
   { key: "custom", label: "Custom" },
+  { key: "marble", label: "Marble" },
 ] as const;
 
 export default function ProductsPage() {
@@ -58,7 +58,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Category sections */}
-      {(["corian", "wooden", "marble", "custom"] as const).map((cat) => {
+      {(["corian", "wooden", "custom", "marble"] as const).map((cat) => {
         const meta     = CATEGORIES_META[cat];
         const products = PRODUCTS.filter((p) => p.category === cat);
         return (

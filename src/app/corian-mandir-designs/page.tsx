@@ -71,7 +71,7 @@ export default function CorianMandirDesignsPage() {
               alt={img.alt_text || "Mandir"}
               width={400}
               height={400}
-              className="w-full h-[220px] object-cover rounded-lg"
+              className="w-[full] h-[220px] object-cover rounded-lg"
               priority={index === 0} // 👈 ADD THIS LINE
             />
 

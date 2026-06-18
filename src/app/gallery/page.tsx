@@ -129,7 +129,7 @@ export default function GalleryPage() {
           {/* Load more */}
           {filteredItems.length > 0 && (
             <div className="text-center mt-12">
-              <Button variant="outline" size="lg">
+              <Button href="/corian-mandir-designs" variant="outline" size="lg">
                 Load More Photos
               </Button>
             </div>

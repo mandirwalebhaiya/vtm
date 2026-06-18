@@ -16,6 +16,13 @@ const COMPANY_LINKS = [
   { label: "Contact",      href: "/contact" },
 ];
 
+const CITY_LINKS = [
+  { label: "Corian Mandir in Delhi",    href: "/corian-mandir-in-delhi" },
+  { label: "Corian Mandir in Kirti Nagar",    href: "/corian-mandir-shop-in-kirti-nagar" },
+  { label: "Corian Mandir in Gurugram",    href: "/corian-mandir-in-gurugram" },
+{ label: "Corian Mandir in Noida",    href: "/corian-mandir-in-noida" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-[#1a0e00] text-white">
@@ -44,33 +51,55 @@ export default function Footer() {
       </div>
 
       {/* Main footer */}
-      <div className="section-padding container-site py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="section-padding container-site py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
+       
         {/* Brand column */}
         <div className="lg:col-span-1">
-          <Link href="/" className="flex items-center gap-3 mb-5">
-            <span className="text-2xl">🛕</span>
-            <div>
-              <span className="font-display text-xl font-semibold block">Vaishno Temple</span>
-              <span className="font-body text-[10px] text-[#f97d08] tracking-[0.2em] uppercase">vaishnotemple.in</span>
+            <Link href="/" className="flex items-center gap-3 mb-5">
+              <span className="text-2xl">🛕</span>
+              <div>
+                <span className="font-display text-xl font-semibold block">Vaishno Temple</span>
+                <span className="font-body text-[10px] text-[#f97d08] tracking-[0.2em] uppercase">vaishnotemple.in</span>
+              </div>
+            </Link>
+            <p className="font-body text-sm text-white/50 leading-relaxed mb-6">
+              Crafting sacred spaces with devotion and artistry since 2005. Trusted by 10,000+ families across India.
+            </p>
+            {/* Social */}
+            <div className="flex gap-4">
+              {["facebook","instagram","youtube","whatsapp"].map((s) => (
+                <a
+                  key={s}
+                  href="http://wa.me/918826858845"
+                  className="w-9 h-9 rounded-full border border-white/20 hover:border-[#f97d08] hover:bg-[#f97d08]/10 flex items-center justify-center transition-all duration-300"
+                  aria-label={s}
+                >
+                  <span className="text-xs text-white/60 hover:text-[#f97d08] capitalize">{s[0].toUpperCase()}</span>
+                </a>
+              ))}
             </div>
-          </Link>
-          <p className="font-body text-sm text-white/50 leading-relaxed mb-6">
-            Crafting sacred spaces with devotion and artistry since 2005. Trusted by 10,000+ families across India.
-          </p>
-          {/* Social */}
-          <div className="flex gap-4">
-            {["facebook","instagram","youtube","whatsapp"].map((s) => (
-              <a
-                key={s}
-                href="#"
-                className="w-9 h-9 rounded-full border border-white/20 hover:border-[#f97d08] hover:bg-[#f97d08]/10 flex items-center justify-center transition-all duration-300"
-                aria-label={s}
-              >
-                <span className="text-xs text-white/60 hover:text-[#f97d08] capitalize">{s[0].toUpperCase()}</span>
-              </a>
-            ))}
-          </div>
+
         </div>
+
+         {/* CITIES */}
+        <div>
+          <h4 className="font-body text-xs font-500 tracking-[0.2em] uppercase text-[#f97d08] mb-5">
+            Cities We Serve
+          </h4>
+          <ul className="space-y-3">
+            {CITY_LINKS.map((l) => (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  className="font-body text-sm text-white/60 hover:text-white animated-underline transition-colors duration-200"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
 
         {/* Products */}
         <div>
@@ -138,6 +167,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+
       </div>
 
       {/* Bottom bar */}

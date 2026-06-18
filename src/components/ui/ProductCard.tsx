@@ -19,8 +19,12 @@ export default function ProductCard({ product, showBadge = true }: ProductCardPr
           src={product.image}
           alt={product.imageAlt}
           fill
+           sizes="(max-width: 768px) 100vw,
+                  (max-width: 1024px) 50vw,
+                  33vw
+                "
           className="object-contain group-hover:scale-110 transition-transform duration-500"
-          priority={false}
+          priority={true}
         />
       </div>
 
