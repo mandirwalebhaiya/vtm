@@ -6,14 +6,14 @@ import WhyUsSection     from "@/components/sections/WhyUsSection";
 import CTASection       from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Vaishno Temple Kirti Nagar — Premium Corian & Wooden Mandirs for Home",
+  title: "Corian Mandir Manufacturer Shop | Vaishno Temple Kirti Nagar — Premium Corian & Wooden Mandirs",
   description:
-    "Buy Corian and wooden Pooja Mandirs direct from the manufacturer. Custom sizes, Vastu-compliant designs, free installation. Trusted by 10,000+ families. vaishnotemple.in",
+    "Buy Corian mandir and wooden Pooja temple direct from the manufacturer. Custom sizes, Vastu-compliant designs, free installation. Trusted by 10,000+ families. vaishnotemple.in",
   alternates: {
     canonical: "https://vaishnotemple.in",
   },
   openGraph: {
-    title: "Vaishno Temple — Premium Corian & Wooden Mandirs for Home",
+    title: "Corian Mandir Manufacturer and VAISHNO TEMPLE Shop in Kirti Nagar — Premium Corian & Wooden Mandirs for Home",
     description:
       "Handcrafted Corian and wooden Pooja Mandirs. Custom designs, Vastu-compliant, pan-India delivery.",
     url: "https://vaishnotemple.in",
@@ -24,12 +24,12 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Vaishno Temple Kirti Nagar",
+  name: "Corian Mandir Manufacturer Shop | Vaishno Temple Kirti Nagar",
   url: "https://vaishnotemple.in",
   logo: "https://vaishnotemple.in/logo.png",
   image: "https://vaishnotemple.in/og-image.jpg",
   description:
-    "Premium handcrafted Corian and wooden Pooja Mandirs for homes and offices across India.",
+    "Best Corian Mandir Manufacturer in Delhi for homes and offices across India.",
   telephone: "+91-8826858845",
   email: "info@vaishnotemple.in",
   address: {
