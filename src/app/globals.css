@@ -1,88 +1,247 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-  --font-display:    'Cormorant Garamond', serif;
-  --font-body:       'Jost', sans-serif;
-  --font-devanagari: 'Tiro Devanagari Hindi', serif;
-
-  --saffron:    #f97d08;
-  --saffron-dk: #e06200;
-  --saffron-lt: #fff3e0;
-  --cream:      #fdfaf5;
-  --gold:       #c9920a;
-  --text-dark:  #1a0e00;
-  --text-mid:   #4a3520;
-  --text-light: #8a7060;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Jost', sans-serif;
+    --font-devanagari: 'Tiro Devanagari Hindi', serif;
+    --saffron: #f97d08;
+    --saffron-dk: #e06200;
+    --saffron-lt: #fff3e0;
+    --cream: #fdfaf5;
+    --gold: #c9920a;
+    --text-dark: #1a0e00;
+    --text-mid: #4a3520;
+    --text-light: #8a7060;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: #ffffff;
-  color: var(--text-dark);
-  -webkit-font-smoothing: antialiased;
+    font-family: var(--font-body);
+    background-color: #ffffff;
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
 }
+
 
 /* ── Utility classes ──────────────────────────── */
-.font-display    { font-family: var(--font-display); }
-.font-devanagari { font-family: var(--font-devanagari); }
+
+.font-display {
+    font-family: var(--font-display);
+}
+
+.font-devanagari {
+    font-family: var(--font-devanagari);
+}
+
 
 /* Decorative divider */
+
 .divider-om::before {
-  content: "🕉";
-  display: block;
-  font-size: 1.5rem;
-  text-align: center;
-  color: var(--saffron);
-  margin-bottom: 0.5rem;
+    content: "🕉";
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--saffron);
+    margin-bottom: 0.5rem;
 }
+
 
 /* Animated underline for links */
+
 .animated-underline {
-  position: relative;
+    position: relative;
 }
+
 .animated-underline::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background: var(--saffron);
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--saffron);
+    transition: width 0.3s ease;
 }
-.animated-underline:hover::after { width: 100%; }
+
+.animated-underline:hover::after {
+    width: 100%;
+}
+
+
+/* Persistent WhatsApp contact button */
+
+.whatsapp-float {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 40;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #fff;
+    background: #25d366;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+    padding: 0.7rem 1rem 0.7rem 0.75rem;
+    box-shadow: 0 8px 24px rgba(16, 94, 48, 0.28);
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    animation: whatsapp-float-in 0.7s ease both, whatsapp-float-bob 3.2s 0.8s ease-in-out infinite, whatsapp-float-pulse 2.8s 1s infinite;
+}
+
+.whatsapp-float:hover {
+    background: #1ebe5d;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 28px rgba(16, 94, 48, 0.38);
+}
+
+.whatsapp-float__icon {
+    display: grid;
+    place-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.whatsapp-float__icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.whatsapp-float__label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+@keyframes whatsapp-float-in {
+    from {
+        opacity: 0;
+        transform: translateY(1rem) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes whatsapp-float-pulse {
+    0%,
+    72%,
+    100% {
+        box-shadow: 0 8px 24px rgba(16, 94, 48, 0.28), 0 0 0 0 rgba(37, 211, 102, 0.32);
+    }
+    84% {
+        box-shadow: 0 8px 24px rgba(16, 94, 48, 0.28), 0 0 0 9px rgba(37, 211, 102, 0);
+    }
+}
+
+@keyframes whatsapp-float-bob {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@media (max-width: 640px) {
+    .whatsapp-float {
+        right: 1rem;
+        bottom: 1rem;
+        padding: 0.7rem;
+    }
+    .whatsapp-float__label {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-float {
+        animation: none;
+        transition: none;
+    }
+}
+
 
 /* Mandala ring decoration */
+
 .mandala-ring {
-  border: 1px solid rgba(249, 125, 8, 0.2);
-  border-radius: 50%;
+    border: 1px solid rgba(249, 125, 8, 0.2);
+    border-radius: 50%;
 }
 
+
 /* Section fade-up animation with stagger */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+
+.stagger-1 {
+    animation-delay: 0.1s;
+}
+
+.stagger-2 {
+    animation-delay: 0.2s;
+}
+
+.stagger-3 {
+    animation-delay: 0.3s;
+}
+
+.stagger-4 {
+    animation-delay: 0.4s;
+}
+
+.stagger-5 {
+    animation-delay: 0.5s;
+}
 
 @layer components {
-  .section-padding {
-    @apply px-5 sm:px-8 md:px-12 lg:px-20 xl:px-28;
-  }
-  .container-site {
-    @apply max-w-7xl mx-auto;
-  }
-  .heading-display {
-    @apply font-display text-[var(--text-dark)] leading-tight tracking-tight;
-  }
-  .text-saffron { color: var(--saffron); }
-  .bg-saffron   { background-color: var(--saffron); }
+    .section-padding {
+        @apply px-5;
+    }
+    .container-site {
+        @apply max-w-7xl mx-auto;
+    }
+    .heading-display {
+        @apply font-display text-[var(--text-dark)] leading-tight tracking-tight;
+    }
+    .text-saffron {
+        color: var(--saffron);
+    }
+    .bg-saffron {
+        background-color: var(--saffron);
+    }
+}
+
+@media (min-width: 640px) {
+    .section-padding {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .section-padding {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-padding {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .section-padding {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
 }

@@ -1,10 +1,12 @@
-export const getWhatsAppLink = (imageUrl: string) => {
+export const getWhatsAppLink = (imageUrl?: string) => {
   const phone = "918826858845"; // 👉 YOUR NUMBER
 
-  const message = `Hi, I saw this mandir design on your website.
-Can you share price & details?
+  const message = imageUrl
+    ? `Hi, I saw the mandir designs on your website.
+Can you share location & details?
 
-Design: ${imageUrl}`;
+Design: ${imageUrl}`
+    : "Hi, I am looking for a mandir, visted your website. Please share location and catalogue.";
 
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 };
